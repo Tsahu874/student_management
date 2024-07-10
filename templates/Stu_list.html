@@ -1,0 +1,39 @@
+<!-- students_list.html -->
+{% extends 'parent.html' %}
+
+{% block title %}
+<title>Student's List</title>
+{% endblock title %}
+
+{% block main %}
+<main>
+  <h1 class="my-3 text-center">Student's List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sno</th>
+        <th scope="col">Name</th>
+        <th scope="col">ID</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in allStudents %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ student.Name }}</td>
+        <td>{{ student.ID }}</td>
+        <td>{{ student.PhoneNo }}</td>
+        <td>{{ student.Email }}</td>
+        <td>
+          <a href="/update?student_id={{student.ID}}"class="btn btn-info btn-sm">Update</a>
+          <a href="/delete?student_id={{student.ID}}"class="btn btn-info btn-sm">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</main>
+{% endblock main %}

@@ -1,0 +1,42 @@
+{% extends 'parent.html' %}
+{% block title %}
+    <title>Update</title>
+{% endblock title %}
+
+{% block main %}
+<h1 class="my-3 text-center">Update the Details</h1>
+<div class="container mt-4">
+  <!-- Form for details -->
+  <form class="text-center border p-4 thick-border" style="max-width: 500px; margin: 0 auto;" action="/update?student_id={{student.ID}}"
+    method="post">
+    <div class="d-flex justify-content-center">
+      <div class="mb-3 col-12">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="Name" name="name" value="{{student.Name}}"
+          style="background-color: #499f93; color: #000000;">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="mb-3 col-12">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" id="ID" name="id" value="{{student.ID}}" style="background-color: #499f93; color: #000000;">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="mb-3 col-12">
+        <label for="Phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="Phone" name="phone" value="{{student.PhoneNo}}"
+          style="background-color: #499f93; color: #000000;">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="mb-3 col-12">
+        <label for="Email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="Email" name="email" value="{{student.Email}}"
+          style="background-color: #499f93; color: #000000;">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Update</button>
+  </form>
+</div>
+{% endblock main %}

@@ -1,0 +1,71 @@
+<!-- Index page will be inherit the content from parent template -->
+{% extends 'parent.html' %}
+
+
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+{% block main %}
+<main>
+  <!-- <h1 class="my-4 text-center">Add Details</h1>
+  <div> -->
+  <!-- <form class="text-center" style="max-width: 400px; margin: 0 auto;">
+      <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name">
+      </div>
+      <div class="mb-3">
+          <label for="ID" class="form-label">ID</label>
+          <input type="text" class="form-control" id="ID">
+      </div>
+      <div class="mb-3">
+          <label for="Phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="Phone">
+      </div>
+      <div class="mb-3">
+          <label for="Email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="Email">
+      </div>
+      <button type="button" class="btn btn-info btn-lg">Add</button>
+  </form> -->
+
+  <h1 class="my-3 text-center">Add Details</h1>
+  <div class="container mt-4">
+    <!-- Form for details -->
+    <form class="text-center border p-4 thick-border" style="max-width: 500px; margin: 0 auto;" action="/"
+      method="post">
+      <div class="d-flex justify-content-center">
+        <div class="mb-3 col-12">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name" name="name" style="background-color: #499f93; color: #000000;">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="mb-3 col-12">
+          <label for="ID" class="form-label">ID</label>
+          <input type="text" class="form-control" id="ID" name="id" style="background-color: #499f93; color: #000000;">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="mb-3 col-12">
+          <label for="Phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="Phone" name="phone"style="background-color: #499f93; color: #000000;">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="mb-3 col-12">
+          <label for="Email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="Email" name="email"style="background-color: #499f93; color: #000000;">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-info btn-lg">Add</button>
+    </form>
+  </div>
+
+
+
+
+
+</main>
+{% endblock main %}

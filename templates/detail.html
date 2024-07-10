@@ -1,0 +1,47 @@
+{% extends 'parent.html' %}
+
+{% block title %}
+<title>Student Details</title>
+{% endblock title %}
+
+{% block main %}
+<main class="container mt-4">
+  <h1 class="my-3 text-center">Student Details</h1>
+  <form class="text-center border p-4 thick-border" style="max-width: 400px; margin: 0 auto;" method="post"
+    action="/detail">
+    <div class="d-flex justify-content-center">
+      <div class="mb-3 col-12">
+        <label for="studentID" class="form-label">Enter Student ID</label>
+        <input type="text" class="form-control" id="studentID" name="studentID" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Get Details</button>
+  </form>
+
+  {% if student %}
+  <div class="mt-4 p-4 border">
+    <h2 class="text-center">Student Information</h2>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td>{{ student.Name }}</td>
+        </tr>
+        <tr>
+          <th scope="row">ID</th>
+          <td>{{ student.ID }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Phone Number</th>
+          <td>{{ student.PhoneNo }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Email Address</th>
+          <td>{{ student.Email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</main>
+{% endblock main %}
